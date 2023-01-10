@@ -1,7 +1,6 @@
 import { createContext, useState, useEffect } from 'react'
 
 
-import SHOP_DATA from '../../shop-data.js'
 
 import { getCategoriesAndDocoments } from '../../utils/firebase/firebise.utils';
 
@@ -25,8 +24,6 @@ export const CategoriesProvider = ({ children }) => {
     }, [])
 
     const value = { categoriesMap }
-    console.log(SHOP_DATA)
-
     return (
         <CategoriesContext.Provider value={value}>{children}</CategoriesContext.Provider>
     )
